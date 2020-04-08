@@ -13,9 +13,9 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
+    binding.pry
     session["product"]["name"]
     @session = session
-    binding.pry
     erb :'views/checkout'
   end
   
