@@ -11,6 +11,10 @@ class App < Sinatra::Base
     erb :'views/index'
   end
   
+  post '/checkout' do
+    
+    erb :'views/checkout'
+  end
   
   
   
