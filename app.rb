@@ -5,7 +5,7 @@ class App < Sinatra::Base
   
   configure '/' do
     enable :sessions
-    set :session_secret, "secret"
+    set :session_secret, "022394"
   end
   
   get '/' do
@@ -13,8 +13,11 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session
-    binding.pry
+    @item = params[:item]
+    session[:item] = @item
+    
+    erb :'views/checkout'
+    
   end
   
   
