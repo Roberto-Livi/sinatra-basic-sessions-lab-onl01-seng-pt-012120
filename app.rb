@@ -12,7 +12,8 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    session[product][name]
+    session["product"]["name"]
+    @session = session
     erb :'views/checkout'
   end
   
