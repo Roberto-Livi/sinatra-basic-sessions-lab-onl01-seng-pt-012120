@@ -12,7 +12,7 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-    
+    session[product][name]
     erb :'views/checkout'
   end
   
